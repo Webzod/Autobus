@@ -939,16 +939,24 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .hero-bg {
-        /* En celulares "fixed" no anda bien (Safari/Android la mueven
-           igual), así que queda "scroll" pero sin ningún offset raro,
-           y se ve completa con "contain" en vez de recortada */
         background-attachment: scroll;
+        /* la de fondo (cover) sirve de "relleno" borroso */
+        background-size: cover;
+        filter: blur(18px) brightness(0.7);
+        transform: scale(1.15); /* evita que se vean bordes nítidos por el blur */
+    }
+
+    /* la imagen real, completa y nítida, va encima centrada */
+    .hero-bg::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: inherit;
         background-size: contain;
+        background-repeat: no-repeat;
         background-position: center center;
-        
     }
 }
-
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
