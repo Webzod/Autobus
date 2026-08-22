@@ -196,20 +196,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2000);
 
     // 2. PÉTALOS/DETALLES FLOTANTES EN EL HERO
-    const heroPetals = document.getElementById('heroPetals');
+      const heroPetals = document.getElementById('heroPetals');
     if (heroPetals) {
-        for (let i = 0; i < 20; i++) {
-            let dot = document.createElement('div');
-            dot.style.position = 'absolute';
-            dot.style.width = Math.random() * 10 + 6 + 'px';
-            dot.style.height = dot.style.width;
-            dot.style.background = Math.random() > 0.5 ? 'rgba(232, 160, 176, 0.5)' : 'rgba(255, 255, 255, 0.5)';
-            dot.style.borderRadius = '50%';
-            dot.style.left = Math.random() * 100 + '%';
-            dot.style.top = '-10%';
-            dot.style.animation = `petalFall ${Math.random() * 6 + 6}s linear infinite`;
-            dot.style.animationDelay = `${Math.random() * 6}s`;
-            heroPetals.appendChild(dot);
+        for (let i = 0; i < 14; i++) {
+            let ticket = document.createElement('div');
+            ticket.className = 'hero-ticket';
+            ticket.style.left = Math.random() * 100 + '%';
+            ticket.style.top = '-10%';
+            ticket.style.opacity = Math.random() * 0.4 + 0.4;
+            ticket.style.animation = `petalFall ${Math.random() * 7 + 8}s linear infinite`;
+            ticket.style.animationDelay = `${Math.random() * 8}s`;
+            heroPetals.appendChild(ticket);
         }
     }
 
@@ -2590,3 +2587,4 @@ document.addEventListener('DOMContentLoaded', () => {
     // Si alguien entra directo con #portafolio en la URL
     if (location.hash === '#portafolio') openPortfolioPage(false);
 })();
+
