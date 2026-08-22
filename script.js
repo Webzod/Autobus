@@ -502,7 +502,13 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
 
-  
+    // 13. PARALLAX HERO
+    const heroBg = document.querySelector('.hero-bg');
+    window.addEventListener('scroll', () => {
+        if (heroBg && window.scrollY < window.innerHeight) {
+            heroBg.style.transform = `translateY(${window.scrollY * 0.4}px)`;
+        }
+    });
 
     // ════════════════════════════════════════════
     // 🛒 14. CARRITO DE BOLETOS (FUNCIONAL, 2 PASOS + CONFIRMACIÓN)
