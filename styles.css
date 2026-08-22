@@ -368,6 +368,8 @@ h1, h2, h3, h4, h5, h6 {
     display: block;
     filter: drop-shadow(0 2px 6px rgba(0,0,0,0.35));  /* contraste contra la foto del hero */
 }
+
+/* Logo/isologo temporal en texto + emoji (mientras no se tenga el isologo original) */
 .logo-icon-temp {
     display: flex;
     align-items: center;
@@ -1904,7 +1906,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---------- Tablet horizontal / laptops chicas (≤1024px) ---------- */
 @media (max-width: 1024px) {
-    .stats-container { grid-template-columns: repeat(2, 1fr); }
+    .stats-container { grid-template-columns: repeat(3, 1fr); }
     .catalog-grid:not(.list-view) { grid-template-columns: repeat(3, 1fr); }
     .features-grid { grid-template-columns: repeat(2, 1fr); }
     .footer-grid { grid-template-columns: 1fr 1fr; }
@@ -2072,7 +2074,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* ---------- Móvil estándar (la mayoría de Android/iPhone en portrait) ---------- */
 @media (max-width: 600px) {
-    .stats-container { grid-template-columns: repeat(2, 1fr); }
+    .stats-container { grid-template-columns: repeat(3, 1fr); gap: 1.2rem; }
 
     .catalog-grid:not(.list-view) { grid-template-columns: repeat(2, 1fr); gap: 1rem; }
     .catalog-grid.list-view { grid-template-columns: 1fr; }
@@ -2098,7 +2100,7 @@ h1, h2, h3, h4, h5, h6 {
 @media (max-width: 480px) {
     .container { width: 94%; padding: clamp(1.8rem, 6vw, 2.5rem) 0; }
 
-    .stats-container { grid-template-columns: 1fr 1fr; }
+    .stats-container { grid-template-columns: repeat(3, 1fr); }
     .catalog-grid:not(.list-view) { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
     .card-img-wrap { height: 130px; }
     .card-content { padding: 0.8rem; }
@@ -2128,7 +2130,7 @@ h1, h2, h3, h4, h5, h6 {
     html { font-size: 14px; }
     .catalog-grid:not(.list-view) { grid-template-columns: 1fr 1fr; gap: 0.6rem; }
     .card-img-wrap { height: 150px; }
-    .stats-container { grid-template-columns: 1fr 1fr; gap: 0.8rem; }
+    .stats-container { grid-template-columns: repeat(3, 1fr); gap: 0.8rem; }
     .logo { font-size: 1.05rem; }
     .btn { width: 100%; }
     .hero-buttons .btn { padding: 0.85rem 1.2rem; }
@@ -2670,6 +2672,11 @@ body { max-width: 100%; }
     border-color: var(--dorado);
     color: var(--negro);
     transform: translateY(-2px);
+}
+/* Ícono del historial más chico para que se vea parejo con el del carrito */
+.nav-history-btn svg {
+    width: 18px;
+    height: 18px;
 }
 .history-count {
     position: absolute;
