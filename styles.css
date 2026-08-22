@@ -937,7 +937,7 @@ h1, h2, h3, h4, h5, h6 {
 
 @media (max-width: 768px) {
     .hero-bg {
-        background-position: 30% 50%; /* ⬅️ y este otro para mobile */
+        background-position: 50% 70%; /* ⬅️ y este otro para mobile */
     }
 }
 
