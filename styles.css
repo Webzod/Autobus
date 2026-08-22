@@ -2673,12 +2673,10 @@ body { max-width: 100%; }
     color: var(--negro);
     transform: translateY(-2px);
 }
-/* Ícono del historial: se achica con transform (no solo width/height)
-   para compensar que el círculo ocupa más espacio visual que el
-   bolso del carrito, aunque ambos SVG midan lo mismo */
+/* Ícono del historial más chico para que se vea parejo con el del carrito */
 .nav-history-btn svg {
-    transform: scale(0.78);
-    transform-origin: center;
+    width: 18px;
+    height: 18px;
 }
 .history-count {
     position: absolute;
