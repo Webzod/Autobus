@@ -931,8 +931,14 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: -50px; left: 0; right: 0; bottom: -50px;
     background-size: cover;
-    background-position: center;
+    background-position: center 35%; /* ⬅️ ajustá este 35% */
     z-index: 1;
+}
+
+@media (max-width: 768px) {
+    .hero-bg {
+        background-position: center 20%; /* ⬅️ y este otro para mobile */
+    }
 }
 
 .hero-overlay {
