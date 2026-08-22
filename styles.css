@@ -937,14 +937,6 @@ h1, h2, h3, h4, h5, h6 {
     z-index: 1;
 }
 
-@media (max-width: 768px) {
-    .hero-bg {
-        background-attachment: scroll;
-        /* la de fondo (cover) sirve de "relleno" borroso */
-        background-size: cover;
-        filter: blur(18px) brightness(0.7);
-        transform: scale(1.15); /* evita que se vean bordes nítidos por el blur */
-    }
 
     /* la imagen real, completa y nítida, va encima centrada */
     .hero-bg::after {
@@ -956,7 +948,7 @@ h1, h2, h3, h4, h5, h6 {
         background-repeat: no-repeat;
         background-position: center center;
     }
-}
+
 .hero-overlay {
     position: absolute;
     top: 0; left: 0; right: 0; bottom: 0;
