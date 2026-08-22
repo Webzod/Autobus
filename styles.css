@@ -934,12 +934,13 @@ h1, h2, h3, h4, h5, h6 {
     background-position: center 35%; /* ⬅️ ajustá este 35% */
     z-index: 1;
 }
+.hero-bg-mobile { display: none; }
 
 @media (max-width: 768px) {
-    .hero-bg {
-        background-position: 50% 70%; /* ⬅️ y este otro para mobile */
-    }
+    .hero-bg-desktop { display: none; }
+    .hero-bg-mobile { display: block; }
 }
+
 
 .hero-overlay {
     position: absolute;
@@ -3355,3 +3356,4 @@ body { max-width: 100%; }
     text-align: center;
 }
 .status-toast.active { opacity: 1; transform: translateX(-50%) translateY(0); }
+ translateX(-50%) translateY(0); }
