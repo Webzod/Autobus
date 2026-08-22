@@ -929,23 +929,21 @@ h1, h2, h3, h4, h5, h6 {
 
 .hero-bg {
     position: absolute;
-    top: -50px; left: 0; right: 0; bottom: -50px;
+    top: 0; left: 0; right: 0; bottom: 0;
     background-size: cover;
     background-position: center;
-    z-index: 1;
-}
-.hero-bg {
-    position: absolute;
-    top: -50px; left: 0; right: 0; bottom: -50px;
-    background-size: cover;
-    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     z-index: 1;
 }
 
 @media (max-width: 768px) {
     .hero-bg {
+        /* En celulares "fixed" no anda bien (Safari/Android la mueven
+           igual), así que queda "scroll" pero sin ningún offset raro,
+           y se ve completa con "contain" en vez de recortada */
+        background-attachment: scroll;
         background-size: contain;
-        background-repeat: no-repeat;
         background-position: center center;
         background-color: var(--verde-bosque);
     }
