@@ -1132,16 +1132,22 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // 16. CONFETI (Pure DOM - CSS Animated)
     const confetiTriggers = document.querySelectorAll('.cta-confetti-trigger');
-    confetiTriggers.forEach(btn => {
-        btn.addEventListener('click', (e) => {
-            e.preventDefault();
-            createConfetti(btn);
-            const href = btn.getAttribute('href');
-            setTimeout(() => {
-                if (href) window.open(href, '_blank');
-            }, 800);
-        });
+confetiTriggers.forEach(btn => {
+    btn.addEventListener('click', (e) => {
+        e.preventDefault();
+        createConfetti(btn);
+        const href = btn.getAttribute('href');
+        setTimeout(() => {
+            if (!href) return;
+            if (href.startsWith('#')) {
+                const target = document.querySelector(href);
+                if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            } else {
+                window.open(href, '_blank');
+            }
+        }, 800);
     });
+});
 
     function createConfetti(element) {
         const container = document.getElementById('confetti-container');
