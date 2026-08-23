@@ -2072,7 +2072,7 @@ h1, h2, h3, h4, h5, h6 {
         height: 38px;
         min-width: 38px;
     }
-   .nav-search-row-desktop .nav-history-btn {
+    .nav-search-row-desktop .nav-history-btn {
     order: -2;
     flex-shrink: 0;
     width: 38px;
@@ -3442,3 +3442,26 @@ body { max-width: 100%; }
     text-align: center;
 }
 .status-toast.active { opacity: 1; transform: translateX(-50%) translateY(0); }
+
+.footer-credit-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    margin-top: 0.8rem;
+    color: #888;
+    font-size: 0.75rem;
+    opacity: 0.65;
+    transition: var(--transition);
+}
+.footer-credit-link:hover {
+    opacity: 1;
+    color: var(--verde-menta);
+}
+.footer-credit-logo {
+    height: 14px;
+    width: auto;
+    display: block;
+}
+.footer-credit-brand {
+    font-weight: 600;
+}
